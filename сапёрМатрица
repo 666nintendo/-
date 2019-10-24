@@ -1,0 +1,34 @@
+def field(width, height):
+    right_cell = [width, height + 1]  # правое поле
+    right_top_cell = [width - 1, height + 1]  # прав верхнее поле
+    right_bott_cell = [width + 1, height + 1]  # правое нижнее поле
+    top_cell = [width - 1, height]  # верх
+    bott_cell = [width + 1, height]  # нижнее поле
+    left_cell = [width, height - 1]  # левое поле
+    left_top_cell = [width - 1, height - 1]  # лев верхнее поле
+    left_bott_cell = [width + 1, height - 1]  # левое нижнее поле
+    result = 0
+    for i in (right_cell, right_top_cell, right_bott_cell,
+              top_cell, bott_cell, left_cell, left_top_cell, left_bott_cell):
+        m, n = i
+        if 0 <= n < width_matrix and 0 <= m < height_matrix:
+            if '*' == matrix[n][m]:
+                result += 1
+    return str(result)
+# заданный размер матрицы 4 на 4
+width_matrix = 4
+height_matrix = 4
+matrix = []
+for _ in range(width_matrix):
+    matrix.append([i for i in input()])
+for width in range(width_matrix):
+    result = ''
+    for height in range(height_matrix):
+        if "." == matrix[width][height]:
+            result += field(width, height)
+        else:
+            result += "*"
+    print(result)
+
+
+
