@@ -1,12 +1,12 @@
 def field(width, height):
-    right_cell = [width, height + 1]  # правое поле
-    right_top_cell = [width - 1, height + 1]  # прав верхнее поле
-    right_bott_cell = [width + 1, height + 1]  # правое нижнее поле
-    top_cell = [width - 1, height]  # верх
-    bott_cell = [width + 1, height]  # нижнее поле
-    left_cell = [width, height - 1]  # левое поле
-    left_top_cell = [width - 1, height - 1]  # лев верхнее поле
-    left_bott_cell = [width + 1, height - 1]  # левое нижнее поле
+    right_cell = [width, height + 1]
+    right_top_cell = [width - 1, height + 1]  
+    right_bott_cell = [width + 1, height + 1]  
+    top_cell = [width - 1, height]
+    bott_cell = [width + 1, height]  
+    left_cell = [width, height - 1]  
+    left_top_cell = [width - 1, height - 1] 
+    left_bott_cell = [width + 1, height - 1]  
     result = 0
     for i in (right_cell, right_top_cell, right_bott_cell,
               top_cell, bott_cell, left_cell, left_top_cell, left_bott_cell):
